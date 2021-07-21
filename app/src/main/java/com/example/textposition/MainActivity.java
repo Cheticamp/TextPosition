@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
             int layoutWidth = layout.getWidth();
 
             // Get the starting and ending positions from the Layout of the top TextView.
-            float textStart = tv.getLayout().getLineLeft(0);
-            float textEnd = tv.getLayout().getLineRight(0);
+            float textStart = tv.getLayout().getLineLeft(0) + tv.getTotalPaddingStart();
+            float textEnd = tv.getLayout().getLineRight(0) + tv.getTotalPaddingStart();
             float viewX = tv.getX();
             // Now set the start and end guidelines to shift our bottom two TextViews.
             // We could also use guidelines with pixel offsets.
